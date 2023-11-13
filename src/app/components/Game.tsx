@@ -140,7 +140,7 @@ function Game() {
       {/*Showing whos turn is now*/}
       <div className="absolute grid place-items-center bg-white border-2 border-border m-3 w-[9.5rem] h-[2.5rem] rounded-sm">
         <div className="flex ">
-          <p className="text-border">Now's Turn:</p>
+          <p className="text-border">{`Now's Turn:`}</p>
           <img
             draggable="false"
             className="w-[1.5rem] ml-[.75rem]"
