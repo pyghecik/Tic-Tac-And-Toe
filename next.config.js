@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: "export",
 };
 
-module.exports = {
-  exportPathMap: function () {
-    return {
-      "/": { page: "/" },
-    };
-  },
-  target: "experimental-serverless-trace",
-};
+module.exports = nextConfig;
