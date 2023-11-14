@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
+import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -70,10 +70,13 @@ function Game() {
   }, Arr);
 
   const imageHolder = (x: number) => (
-    <img
-      draggable="false"
+    <Image
+      draggable={false}
       src={Arr[x] === 1 ? "/Circle.png" : "/Cross.png"}
       className="w-[6.25rem]"
+      alt={Arr[x] === 1 ? "Circle" : "Cross"}
+      width={100}
+      height={100}
     />
   );
 
@@ -141,21 +144,26 @@ function Game() {
       <div className="absolute grid place-items-center bg-white border-2 border-border m-3 w-[9.5rem] h-[2.5rem] rounded-sm">
         <div className="flex ">
           <p className="text-border">{`Now's Turn:`}</p>
-          <img
-            draggable="false"
+          <Image
+            draggable={false}
             className="w-[1.5rem] ml-[.75rem]"
             src={PlayerValue === 1 ? "/Circle.png" : "/Cross.png"}
+            alt={PlayerValue === 1 ? "Circle" : "Cross"}
+            width={24}
+            height={24}
           />
         </div>
       </div>
       {/*Comercial Break*/}
       <div className="grid h-screen place-items-center">
         {/*Our game grid*/}
-        <img
-          draggable="false"
+        <Image
+          draggable={false}
           src="/Grid.png"
           alt="Grid"
           className="w-[35rem]"
+          width={560}
+          height={560}
         />
         {/*Grid that holds our icons*/}
         <div className="absolute grid grid-rows-3 grid-flow-col gap-[4rem]">
