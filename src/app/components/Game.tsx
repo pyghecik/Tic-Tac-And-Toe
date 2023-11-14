@@ -71,6 +71,7 @@ function Game() {
 
   const imageHolder = (x: number) => (
     <Image
+      key={x}
       draggable={false}
       src={Arr[x] === 1 ? "/Circle.png" : "/Cross.png"}
       className="w-[6.25rem]"
@@ -145,6 +146,7 @@ function Game() {
         <div className="flex ">
           <p className="text-border">{`Now's Turn:`}</p>
           <Image
+            key="Who's turn is it?"
             draggable={false}
             className="w-[1.5rem] ml-[.75rem]"
             src={PlayerValue === 1 ? "/Circle.png" : "/Cross.png"}
@@ -158,6 +160,7 @@ function Game() {
       <div className="grid h-screen place-items-center">
         {/*Our game grid*/}
         <Image
+          key="Grid"
           draggable={false}
           src="/Grid.png"
           alt="Grid"
