@@ -3,4 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
-module.exports = nextConfig;
+module.exports = {
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+    };
+  },
+  target: "experimental-serverless-trace",
+};
