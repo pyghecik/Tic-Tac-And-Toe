@@ -5,7 +5,7 @@ Simple Tic-Tac-And-Toe project!
  - Next.js
  - Typescript
  - Tailwindcss
- - Library for notifications "React-Toastify" (https://github.com/fkhadra/react-toastify?source=post_page-----e06e8d338bb3--------------------------------)  
+ - Library for notifications is "React-Toastify"
 # Try it yourself
  https://pyghecik.github.io/Tic-Tac-And-Toe/
 # Additional Info
